@@ -6,5 +6,6 @@
 Tiles will be randomly sorted at the beginning of every game.
 Any matched tiles will stay facing up.
 Tiles that do not match will face down after every round.
-There will be a one minute timer. You can try to beat your previous time after every game.
 Once all pairs are matched or the timer ends, the game is over. If the timer ends before all matches can be made, you lose. If all matches are made before the game ends, you win!
+There will be a one minute timer. You can try to beat your previous time after every game.
+Good luck and have fun!
