@@ -28,8 +28,8 @@ body {
 .card {
     display: grid;
     place-items: center;
-    height: 40vh;
-    width: 40vw;
+    height: 30vh;
+    width: 30vw;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdbtUKL2lFkpIs2-l9A9keBaWUYPEAKVoZoA&usqp=CAU);
     background-repeat: no-repeat;
     cursor: pointer;
