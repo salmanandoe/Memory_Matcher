@@ -3,7 +3,9 @@ let counter = 0;
 let firstSelection = "";
 let secondSelection = "";
 
-const cards = document.querySelectorAll(".cards .card");
+const cards = document.querySelectorAll(".cards .card");   
+// querySelectorAll allows for me to select everything that matches the selector I specify
+
 cards.forEach((card) => {
     card.addEventListener("click", () => {
         // console.log(true); // to check if click is working
@@ -17,30 +19,29 @@ cards.forEach((card) => {
             counter = 0;
 
             if(firstSelection === secondSelection) {
-                const correctCards = document.querySelectorAll(
+                const correctMatch = document.querySelectorAll(
                     ".card[pokemon='" + firstSelection + "']"
                 );
 
-                correctCards[0].classList.add("checked");
-                correctCards[0].classList.remove("clicked");
-                correctCards[1].classList.add("checked");
-                correctCards[1].classList.remove("clicked");
-            } else {
-                const incorrectCards = document.querySelectorAll(".card.clicked");
+                correctMatch[0].classList.add("match");
+                correctMatch[0].classList.remove("clicked");
+                correctMatch[1].classList.add("match");
+                correctMatch[1].classList.remove("clicked");
 
-                incorrectCards[0].classList.add("wrong");
-                incorrectCards[1].classList.add("wrong");
+            } else {
+                const incorrectMatch = document.querySelectorAll(".card.clicked");
+
+                incorrectMatch[0].classList.add("wrong");
+                incorrectMatch[1].classList.add("wrong");
 
                 setTimeout(() => {
-                    incorrectCards[0].classList.remove("wrong");
-                    incorrectCards[0].classList.remove("clicked");
-                    incorrectCards[1].classList.remove("wrong");
-                    incorrectCards[1].classList.remove("clicked");
+                    incorrectMatch[0].classList.remove("wrong");
+                    incorrectMatch[0].classList.remove("clicked");
+                    incorrectMatch[1].classList.remove("wrong");
+                    incorrectMatch[1].classList.remove("clicked");
                 }, 1000);
             }
         }
-        // console.log(firstSelection);
-        // console.log(secondSelection);
     });
 });
 
