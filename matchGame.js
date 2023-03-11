@@ -1,5 +1,5 @@
 
-let counter = 0;
+let i = 0;
 let firstSelection = "";
 let secondSelection = "";
 
@@ -11,12 +11,12 @@ cards.forEach((card) => {
         // console.log(true); // to check if click is working
         card.classList.add("clicked");
 
-        if(counter === 0) {
+        if(i === 0) {
             firstSelection = card.getAttribute("pokemon");
-            counter++;
+            i++;
         } else {
             secondSelection = card.getAttribute("pokemon");
-            counter = 0;
+            i = 0;
 
             if(firstSelection === secondSelection) {
                 const correctMatch = document.querySelectorAll(
