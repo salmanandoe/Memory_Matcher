@@ -4,47 +4,55 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-position: center;
+    transform: scale(0.8);
 }
 
 .heading {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 6vh;
+    font-size: 7vh;
     color:rgb(2, 59, 2);
     text-align: center;
 }
 
-.game-container {
+.cards {
     display: grid;
-    place-items: center;
-    min-height: 100vh;
-}
-
-.all-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); 
     grid-gap: 1em;
 }
 
 .card {
     display: grid;
     place-items: center;
-    height: 30vh;
-    width: 40vw;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdbtUKL2lFkpIs2-l9A9keBaWUYPEAKVoZoA&usqp=CAU);
+    height: 30vh;
+    width: 30vw;
     background-repeat: no-repeat;
-    cursor: pointer;
+    background-position: center;
+    cursor: grab;
 }
 
 .card:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
 .card img {
     width: 80%;
-    max-height: 90px;
+    max-height: 80%;
     opacity: 0;
 }
 
-    
+.card.clicked {
+    background-color: rgb(237, 240, 35); 
+}    
 
+.card.match {
+    background-color: green;
+}
 
+.card.clicked img, .card.match img {
+    opacity: 1;
+}
+
+.card.wrong {
+    background-color: rgb(238, 87, 87);
+}
